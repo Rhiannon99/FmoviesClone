@@ -23,12 +23,14 @@ const MovieDescription = () => {
   })
 
   return (
-    <div className='bg-zinc-900 h-[100vh]'>
-      <div className="banner">
+    <div className='bg-zinc-900 h-[100%] -mb-[10em]'>
+      <div className="banner pt-5 ">
         <img src={`https://image.tmdb.org/t/p/w500${moviesDetails?.poster_path}`} alt="movie-banner" 
         className='ml-[50vh] h-[70vh] w-[50vw] bg' />
       </div>
-      <div className="description-box ml-10 " >
+
+
+      <div className="description-box mt-[5em] ml-[15em] mb-[10em]  p-10" >
         <div className="title pl-[19px] text-2xl text-white pl">
           {moviesDetails?.title}
         </div>
