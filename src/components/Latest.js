@@ -1,9 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Latest = () => {
     const [latestMovies, setMovies] = useState([])
-
+    const navigate = useNavigate()
     // const key = "173eedbe7b51cd4828d5694ef52eae1e"
 
     const apiUrl = 'https://api.themoviedb.org/3/movie/top_rated?api_key=173eedbe7b51cd4828d5694ef52eae1e&language=en-US&page=1'
@@ -32,7 +33,10 @@ const Latest = () => {
                 {
                 latestMovies.map((latest_movie) => (
                     <div className="col p-2 w-[10vw] h-[35.5vh]" key={latest_movie.id} >
-                        <img src={`https://image.tmdb.org/t/p/w500${latest_movie.poster_path}`} alt="" />
+                        <img src={`https://image.tmdb.org/t/p/w500${latest_movie.poster_path}`} alt="" 
+                        onClick={() => { navigate(`/movie/${latest_movie.id}`) }}
+                        className='cursor-pointer'
+                        />
                     </div>
                 ))
                 }

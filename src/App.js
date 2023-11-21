@@ -19,11 +19,13 @@ const App = () => {
           <Route path="/genre" element={<Genre />} />
           <Route path="/country" element={<Country />} />
           <Route path="/movie" element={<Movie />} />
-          <Route path='/:id' element={<MovieDescription/>}/>
+          <Route path='/movie/:id' element={<MovieDescription/>}/>
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
+
+    <Footer/>
     </div>
   )
 }

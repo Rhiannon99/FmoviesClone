@@ -48,7 +48,6 @@ const Home = () => {
             <br />
             <div><p className='text-white text-2xl m-6'>Top Rated</p></div>
             <Latest />
-            <MovieDescription/>
         </div>
     )
 }

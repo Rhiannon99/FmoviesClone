@@ -29,7 +29,7 @@ const Suggestions = () => {
                 {movies.map((movie) => (
                     <div className="col p-2 w-[10vw] h-[35.5vh]" key={movie.id}>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt=""
-                            onClick={() => { navigate(`${movie.id}`) }}
+                            onClick={() => { navigate(`/movie/${movie.id}`) }}
                             className='cursor-pointer' />
                     </div>
                 ))
